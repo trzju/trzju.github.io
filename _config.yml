@@ -1,13 +1,32 @@
+# 网站基础设置
 title: Trzju's Tech Blog
-description: 记录机器人学、强化学习与摄影
-theme: jekyll-theme-minimal
-plugins:
-  - jekyll-seo-tag
+description: "Focus on RL, C++, and Robotics."
+url: "https://trzju.github.io"
 
-# 启用 Markdown 的数学公式支持 (MathJax) 
-# 注意：虽然这里开启了，但为了确保公式在所有页面显示，
-# 我在下面的文章模板里直接加了 MathJax 的引用代码。
+# 核心：使用远程主题 (无需本地安装)
+remote_theme: mmistakes/minimal-mistakes
+
+# 风格设置 (可选: default, dark, mint, contrast, air, sunrise)
+minimal_mistakes_skin: "air" 
+
+# 启用数学公式
 markdown: kramdown
 kramdown:
   input: GFM
   math_engine: mathjax
+
+# 插件
+plugins:
+  - jekyll-include-cache
+
+# 侧边栏设置
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      toc: true             # 自动生成文章目录
+      toc_label: "目录"
+      toc_icon: "cog"
