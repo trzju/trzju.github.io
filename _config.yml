@@ -1,0 +1,13 @@
+title: Trzju's Tech Blog
+description: 记录机器人学、强化学习与摄影
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-seo-tag
+
+# 启用 Markdown 的数学公式支持 (MathJax) 
+# 注意：虽然这里开启了，但为了确保公式在所有页面显示，
+# 我在下面的文章模板里直接加了 MathJax 的引用代码。
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
