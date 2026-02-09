@@ -36,6 +36,9 @@ jobs:
       - name: Build Hexo
         run: npm run build
 
+      - name: Build site
+        run: npx hexo generate
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
