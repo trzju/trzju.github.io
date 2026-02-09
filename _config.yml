@@ -1,0 +1,74 @@
+# 网站基础信息
+title: Trzju's Blog
+subtitle: "Life Oriented Programming"
+description: "Focus on RL, Robotics, and C++"
+author: Trzju
+language: zh-CN
+timezone: Asia/Shanghai
+url: https://trzju.github.io
+
+# --- 核心修复 1：代码高亮设置 ---
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: true          # 必须开启，否则 Fluid 主题无法渲染颜色
+
+prismjs:
+  enable: false
+
+# --- 核心修复 2：数学公式渲染器设置 ---
+# 使用 markdown-it 引擎，配合 mathjax3 插件
+markdown:
+  preset: 'default'
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-mathjax3
+
+# --- 主题配置 (Hexo Fluid) ---
+theme: fluid
+per_page: 10
+
+theme_config:
+  image:
+    enable: true
+  navbar:
+    blog_title: "Trzju's Tech"
+  banner:
+    enable: true
+    parallax: true
+    subtitle:
+      typed: true
+      loop: true
+      text: ["Reinforcement Learning", "Robotics Control", "C++ & Algorithms"]
+  
+  menu:
+    - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
+    - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
+    - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
+    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
+
+  post:
+    meta:
+      author: { enable: false }
+      date: { enable: true }
+    # 确保主题侧也开启数学支持
+    math:
+      enable: true
+      specific: false
+      engine: mathjax
+
+  footer:
+    content: '© 2026 Trzju | Powered by Hexo & Fluid'
+
+# 部署设置
+deploy:
+  type: git
