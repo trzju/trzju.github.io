@@ -13,7 +13,7 @@ per_page: 10
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 
-# 启用代码高亮 (Highlight.js)
+# 代码高亮
 highlight:
   enable: true
   line_number: true
@@ -22,11 +22,10 @@ highlight:
   wrap: true
   hljs: true
 
-# 禁用 PrismJS
 prismjs:
   enable: false
 
-# Markdown 渲染设置 (核心修改部分)
+# Markdown 渲染 (核心修改部分)
 markdown:
   preset: 'default'
   render:
@@ -40,11 +39,10 @@ markdown:
     - markdown-it-mathjax3
     - name: markdown-it-anchor
       options:
-        level: [1, 2, 3, 4, 5, 6]
+        level: 2
         permalink: true
         permalinkClass: "header-anchor"
         permalinkSymbol: "#"
-        permalinkBefore: false
 
 # 主题个性化配置 (Fluid)
 theme_config:
