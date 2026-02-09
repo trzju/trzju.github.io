@@ -1,8 +1,8 @@
 # 网站基础信息
-title: Oreoreo's Blog
-subtitle: "Life Oriented Programming"
+title: Trzju's Blog
+subtitle: "Reinforcement Learning & Robotics"
 description: "Focus on RL, Robotics, and C++"
-author: Oreoreo
+author: Trzju
 language: zh-CN
 timezone: Asia/Shanghai
 url: https://trzju.github.io
@@ -25,7 +25,7 @@ highlight:
 prismjs:
   enable: false
 
-# Markdown 渲染 (核心修改部分)
+# Markdown 渲染 (配合你的 package.json)
 markdown:
   preset: 'default'
   render:
@@ -44,26 +44,24 @@ markdown:
         permalinkClass: "header-anchor"
         permalinkSymbol: "#"
 
-# 主题个性化配置 (Fluid)
+# 主题配置 (Fluid)
 theme_config:
   image:
     enable: true
   navbar:
-    blog_title: "Oreoreo's Note"
+    blog_title: "Trzju's Tech"
   banner:
     enable: true
     parallax: true
     subtitle:
       typed: true
       loop: true
-      text: "Good morning, good afternoon, good evening, and good night!"
-  
+      text: ["Reinforcement Learning", "Robotics Control", "C++ & Algorithms"]
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
-
   post:
     meta:
       author: { enable: false }
@@ -74,7 +72,6 @@ theme_config:
       enable: true
       specific: false
       engine: mathjax
-
   footer:
     content: '© 2026 Trzju | Powered by Hexo & Fluid'
 
