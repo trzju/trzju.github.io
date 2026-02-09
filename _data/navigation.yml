@@ -1,9 +1,0 @@
-main:
-  - title: "首页"
-    url: /
-  - title: "Reinforcement Learning"
-    url: /rl/
-  - title: "C++ Programming"
-    url: /cpp/
-  - title: "Robotics"
-    url: /robotics/
