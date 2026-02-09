@@ -81,3 +81,8 @@ theme_config:
 # 部署
 deploy:
   type: git
+  repo: https://github.com/trzju/trzju.github.io.git
+  branch: gh-pages
+  name: Trzju
+  email: trzju@users.noreply.github.com
+  message: 'Site updated: {{ now("yyyy-MM-dd HH:mm:ss") }}'
