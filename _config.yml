@@ -41,7 +41,6 @@ markdown:
     - name: markdown-it-anchor
       options:
         level: [1, 2, 3, 4, 5, 6]
-        slugify: "slugify" # 自动把标题转为合法的 URL 字符
         permalink: true
         permalinkClass: "header-anchor"
         permalinkSymbol: "#"
