@@ -2,8 +2,8 @@ name: Build and Deploy Hexo
 on:
   push:
     branches:
-      - main  # 确保这里和你仓库的默认分支一致
-  workflow_dispatch: # 这一行保留了手动触发按钮
+      - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -17,16 +17,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 关键点：这里必须是 Setup Node，而不是 Jekyll
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      # 关键步骤：安装 Hexo 依赖 (Node.js)
       - name: Install Dependencies
         run: npm install
 
-      # 关键步骤：生成静态网页
+      # 关键点：这里必须是 hexo generate
       - name: Build Hexo
         run: npx hexo generate
 
