@@ -1,8 +1,8 @@
 # 网站基础信息
-title: Trzju's Blog
+title: Oreoreo's Blog
 subtitle: "Life Oriented Programming"
 description: "Focus on RL, Robotics, and C++"
-author: Trzju
+author: Oreoreo
 language: zh-CN
 timezone: Asia/Shanghai
 url: https://trzju.github.io
@@ -49,14 +49,14 @@ theme_config:
   image:
     enable: true
   navbar:
-    blog_title: "Trzju's Tech"
+    blog_title: "Oreoreo's Note"
   banner:
     enable: true
     parallax: true
     subtitle:
       typed: true
       loop: true
-      text: ["Reinforcement Learning", "Robotics Control", "C++ & Algorithms"]
+      text: "Good morning, good afternoon, good evening, and good night!"
   
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
