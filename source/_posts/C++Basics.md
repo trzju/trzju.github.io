@@ -1,7 +1,7 @@
 ---
-title: C++ 核心机制深度解析：从对象模型到并发实践
+title: C++ 基础知识
 date: 2026-02-09
-tags: [C++, Engineering, Notes]
+tags: [C++, Notes]
 ---
 
 # 前言
@@ -455,4 +455,5 @@ d2.join(); // 等待线程结束
 ### std::async, std::future
 
 *(相关章节待补充)*
+
 
