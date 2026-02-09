@@ -22,11 +22,11 @@ highlight:
   wrap: true
   hljs: true
 
-# 禁用 PrismJS (防止冲突)
+# 禁用 PrismJS
 prismjs:
   enable: false
 
-# Markdown 渲染设置 (配合 markdown-it 插件)
+# Markdown 渲染设置 (核心修改部分)
 markdown:
   preset: 'default'
   render:
@@ -38,6 +38,14 @@ markdown:
     quotes: '“”‘’'
   plugins:
     - markdown-it-mathjax3
+    - name: markdown-it-anchor
+      options:
+        level: [1, 2, 3, 4, 5, 6]
+        slugify: "slugify" # 自动把标题转为合法的 URL 字符
+        permalink: true
+        permalinkClass: "header-anchor"
+        permalinkSymbol: "#"
+        permalinkBefore: false
 
 # 主题个性化配置 (Fluid)
 theme_config:
@@ -63,6 +71,8 @@ theme_config:
     meta:
       author: { enable: false }
       date: { enable: true }
+    toc:
+      enable: true
     math:
       enable: true
       specific: false
