@@ -24,6 +24,15 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      # --- 新增这步调试代码 ---
+      - name: Debug - Show Files
+        run: |
+          echo "=== 当前目录下的文件 ==="
+          ls -la
+          echo "=== 检查 _config.yml 是否存在 ==="
+          if [ -f "_config.yml" ]; then echo "文件存在"; else echo "文件缺失!!!"; fi
+      # -----------------------
+
       - name: Build Hexo
         run: npm run build
 
