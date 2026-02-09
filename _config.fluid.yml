@@ -1,0 +1,19 @@
+# 导航栏标题
+navbar:
+  blog_title: "Trzju's Tech"
+
+# 首页大图与打字机特效
+banner:
+  enable: true
+  parallax: true
+  subtitle:
+    typed: true   # 开启打字机
+    loop: true    # 开启循环
+    # 这里修改你想显示的文字列表
+    text: ["Reinforcement Learning", "Robotics Control", "C++ & Algorithms"]
+
+# 页脚
+footer:
+  content: '© 2026 Trzju | Powered by Hexo & Fluid'
+
+# 只要在这个文件里写的配置，都会强制覆盖掉默认的 "An elegant..."
