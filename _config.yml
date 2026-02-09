@@ -7,20 +7,26 @@ language: zh-CN
 timezone: Asia/Shanghai
 url: https://trzju.github.io
 
-# --- 核心修复 1：代码高亮设置 ---
+# 核心设置
+theme: fluid
+per_page: 10
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# 启用代码高亮 (Highlight.js)
 highlight:
   enable: true
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
-  hljs: true          # 必须开启，否则 Fluid 主题无法渲染颜色
+  hljs: true
 
+# 禁用 PrismJS (防止冲突)
 prismjs:
   enable: false
 
-# --- 核心修复 2：数学公式渲染器设置 ---
-# 使用 markdown-it 引擎，配合 mathjax3 插件
+# Markdown 渲染设置 (配合 markdown-it 插件)
 markdown:
   preset: 'default'
   render:
@@ -33,10 +39,7 @@ markdown:
   plugins:
     - markdown-it-mathjax3
 
-# --- 主题配置 (Hexo Fluid) ---
-theme: fluid
-per_page: 10
-
+# 主题个性化配置 (Fluid)
 theme_config:
   image:
     enable: true
@@ -60,7 +63,6 @@ theme_config:
     meta:
       author: { enable: false }
       date: { enable: true }
-    # 确保主题侧也开启数学支持
     math:
       enable: true
       specific: false
@@ -69,6 +71,6 @@ theme_config:
   footer:
     content: '© 2026 Trzju | Powered by Hexo & Fluid'
 
-# 部署设置
+# 部署
 deploy:
   type: git
