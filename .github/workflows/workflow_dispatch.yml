@@ -1,0 +1,10 @@
+name: Deploy Blog
+
+on:
+  # 1. 保留手动触发开关
+  workflow_dispatch:
+
+  # 2. 如果你想彻底禁止“一提交就触发”，请删除或注释掉下方的 push 部分
+  # push:
+  #   branches:
+  #     - main
