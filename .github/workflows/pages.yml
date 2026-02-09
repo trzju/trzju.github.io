@@ -1,6 +1,9 @@
 name: Build and Deploy Hexo
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main  # 确保这里和你仓库的默认分支一致
+  workflow_dispatch: # 这一行保留了手动触发按钮
 
 permissions:
   contents: read
@@ -19,17 +22,13 @@ jobs:
         with:
           node-version: '20'
 
+      # 关键步骤：安装 Hexo 依赖 (Node.js)
       - name: Install Dependencies
         run: npm install
 
-      # --- 修改了这里：打印文件内容检查 ---
-      - name: Debug - Check Config Content
-        run: cat _config.yml
-
-      # --- 修改了这里：加上了 --debug 参数 ---
-      # 这会让 Hexo 输出详细的错误堆栈，而不是只显示帮助菜单
+      # 关键步骤：生成静态网页
       - name: Build Hexo
-        run: npx hexo generate --debug
+        run: npx hexo generate
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
