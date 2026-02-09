@@ -1,6 +1,7 @@
 ---
 title: C++ 基础知识
 date: 2026-02-09
+categories: [C++]
 tags: [C++, Notes]
 ---
 
@@ -455,5 +456,6 @@ d2.join(); // 等待线程结束
 ### std::async, std::future
 
 *(相关章节待补充)*
+
 
 
