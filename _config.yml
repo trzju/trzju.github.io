@@ -76,7 +76,7 @@ theme_config:
       specific: false
       engine: mathjax
   footer:
-    content: '© 2026 Oreoreo | Powered by Hexo & Fluid'
+    content: '© 2025 Oreoreo | Powered by Hexo & Fluid'
 
 # 部署
 deploy:
